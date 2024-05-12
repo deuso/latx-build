@@ -1,0 +1,15 @@
+# Changelog
+
+[See the English Version Here >>](NEWS.en)
+
+## 1.5.1-rc1
+
+- Implemented native runtime library passthrough for `lat-x86_64` with support
+  for over 40 dynamic libraries, such as libGL and libX11 (you may disable
+  this feature with the `LATX_KZT=0` variable).
+- Implemented AOT (ahead-of-time) compiler, generating static cache for code
+  already ran by LATX (you may disable this feature with the `LATX_AOT=0`
+  variable).
+- SPEC 2000 yields 65% native performance.
+- Added support for the SSSE3 and SSE4 SIMD extensions.
+- Added support for more network socket types and `ioctl` system calls.
