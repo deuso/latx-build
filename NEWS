@@ -1,0 +1,11 @@
+# 更改日志
+
+[See the English Version Here >>](NEWS.en)
+
+## 1.5.1-rc1
+
+- `latx-x86_64` 实现原生库直通技术，支持 `libGL`、`libX11` 等 40 余个动态库（可设置环境变量 `LATX_KZT=0` 关闭）
+- 实现 AOT (ahead of time) 预编译技术，基于已运行代码生成静态缓存加速后续运行（可设置环境变量 `LATX_AOT=0` 关闭）
+- SPEC 2000 转译效率可达 65%
+- 新增 SSSE3 和 SSE4 指令集扩展支持
+- 支持更多网络套接字类型和更多 ioctl 系统调用
