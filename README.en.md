@@ -34,8 +34,8 @@ oma install latx
 
 LATX comes with two main executables:
 
-- `lat-x86_64` for running 64-bit x86 applications.
-- `lat-i386` for running 32-bit x86 applications.
+- `latx-x86_64` for running 64-bit x86 applications.
+- `latx-i386` for running 32-bit x86 applications.
 
 After installing the main executables (distribution vendors should use `/usr/bin`, personal/local installations should use `/usr/local/bin`), you would also need to prepare the x86 runtime environments (usually a distribution sysroot, adjust in accordance to your own needs):
 
@@ -47,10 +47,10 @@ LATX is now ready to go.
 Usage
 ---
 
-After LATX is installed, you may run your x86 applications via the main executables `lat-x86_64` and `lat-i386`. For instance:
+Once LATX is installed, you may run your x86 applications via the main executables `latx-x86_64` and `latx-i386`. For instance:
 
 ```
-lat-x86_64 ~/x86/x86_64-linux-gnu-gcc
+latx-x86_64 ~/x86/x86_64-linux-gnu-gcc
 ```
 
 Environmental Variables
@@ -73,7 +73,7 @@ Below are sample binfmt_misc configurations for LATX.
 For Linux distributions using systemd, it is recommended to install the following configure to `/usr/lib/binfmt.d/latx-x86_64.conf`. After which, run `systemctl restart systemd-binfmt` to allow the configuration to take effect.
 
 ```
-:x86_64:M::\x7fELF\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x3e\x00:\xff\xff\xff\xff\xff\xfe\xfe\x00\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff\xff:/usr/bin/lat-x86_64:POCF
+:x86_64:M::\x7fELF\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x3e\x00:\xff\xff\xff\xff\xff\xfe\xfe\x00\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff\xff:/usr/bin/latx-x86_64:POCF
 ```
 
 ### 32-bit x86 Applications
@@ -81,5 +81,5 @@ For Linux distributions using systemd, it is recommended to install the followin
 For Linux distributions using systemd, it is recommended to install the following configure to `/usr/lib/binfmt.d/latx-i386.conf`. After which, run `systemctl restart systemd-binfmt` to allow the configuration to take effect.
 
 ```
-:i386:M::\x7fELF\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x03\x00:\xff\xff\xff\xff\xff\xfe\xfe\x00\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff\xff:/usr/bin/lat-i386:POCF
+:i386:M::\x7fELF\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x03\x00:\xff\xff\xff\xff\xff\xfe\xfe\x00\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff\xff:/usr/bin/latx-i386:POCF
 ```
