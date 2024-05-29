@@ -61,6 +61,10 @@ LATX uses environmental variables to toggle its various internal features. You m
 - `$LAT_AOT` enables/disables ahead-of-time (AOT) compiler (caching instructions and data to improve performance); specify 1 to enable, 0 to disable.
 - `$LAT_KZT` enables/disables native library passthrough (using native libraries where applicable to improve performance); specify 1 to enable, 0 to disable.
 
+For debug only:
+- `$LATX_SOFTFPU` enables/disables soft float emulation (To garranty the 80 bit precision of x87 instructions). specify 1 to enable, 0 to disable.
+Typically, 32-bit applications are more susceptible to the precision of the x87 floating-point unit. If you encounter abnormal functionality in an application, you can try testing with this environment variable.
+
 Configuring binfmt_misc
 ---
 
