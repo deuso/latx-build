@@ -2,7 +2,17 @@
 
 [See the English Version Here >>](NEWS.en)
 
-## 1.5.1-rc1
+## 1.5.2-rc1 (May 29, 2024)
+
+- Fixed synchronization errors in multi-threaded self-modifying logic.
+- Added support for SSE4.2, POPCNT and other instructions.
+- Added Support for more ioctls in `latx-x86_64`, such as `DRM_SYNCOBJ`.
+- Fixed game crashes due to `NSIG` differences between new- and old-world
+  runtime environments.
+- Fixed application crashes with `latx-x86_64` related to library passthrough.
+- Added support for Vulkan.
+
+## 1.5.1-rc1 (May 10, 2024)
 
 - Implemented native runtime library passthrough for `lat-x86_64` with support
   for over 40 dynamic libraries, such as libGL and libX11 (you may disable
@@ -13,14 +23,3 @@
 - SPEC 2000 yields 65% native performance.
 - Added support for the SSSE3 and SSE4 SIMD extensions.
 - Added support for more network socket types and `ioctl` system calls.
-
-
-## 1.5.2-rc1
-
-- Fix synchronization errors in multi-threaded self-modifying logic;
-- Enable SSE42 POPCNT and other features;
-- Support for more ioctls in latx-x86_64, such as DRM_SYNCOBJ;
-- Fix issues with NSIG differences between new and old worlds that cause some
-  game software to fail;
-- Direct fixes for some crash issues in the latx-x86_64 library, and new Vulkan
-  support has been added.
