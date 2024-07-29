@@ -2,6 +2,13 @@
 
 [See the English Version Here >>](NEWS.en)
 
+## 1.5.3-rc1 (July 29, 2024)
+- Fix bugs related to library passthrough；
+- Fix bugs related to AOT;
+- Fix bugs and performance related to linux unity applications；
+- refactor ptrace emulation；
+- 32 bit syncobj ioctl support；
+
 ## 1.5.2-rc1 (May 29, 2024)
 
 - Fixed synchronization errors in multi-threaded self-modifying logic.
