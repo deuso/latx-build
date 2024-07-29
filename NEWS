@@ -2,6 +2,13 @@
 
 [See the English Version Here >>](NEWS.en)
 
+## 1.5.3-rc1 (2024-07-29)
+- 修复一些库直通的错误；
+- 修复一些 AOT 的错误；
+- 针对 linux unity 进行了功能修复与性能优化；
+- 重构 ptrace 模拟方案；
+- 新世界支持 32 位 syncobj ioctl；
+
 ## 1.5.2-rc1 (2024-05-29)
 
 - 修复多线程自修改逻辑的同步错误
