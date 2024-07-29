@@ -60,6 +60,7 @@ LATX uses environmental variables to toggle its various internal features. You m
 
 - `$LATX_AOT` enables/disables ahead-of-time (AOT) compiler (caching instructions and data to improve performance); specify 1 to enable, 0 to disable.
 - `$LATX_KZT` enables/disables native library passthrough (using native libraries where applicable to improve performance); specify 1 to enable, 0 to disable.
+- `$LATX_ANONYM`：handle virtual machine check correctly; specify 1 to enable, 0 to disable.
 
 For debugging only:
 
