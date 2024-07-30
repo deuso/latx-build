@@ -58,13 +58,13 @@ Environmental Variables
 
 LATX uses environmental variables to toggle its various internal features. You may turn on or off these features, should you run into compatibility or stability issues:
 
-- `$LATX_AOT` enables/disables ahead-of-time (AOT) compiler (caching instructions and data to improve performance); specify 1 to enable, 0 to disable.
-- `$LATX_KZT` enables/disables native library passthrough (using native libraries where applicable to improve performance); specify 1 to enable, 0 to disable.
-- `$LATX_ANONYM`：handle virtual machine check correctly; specify 1 to enable, 0 to disable.
+- `$LATX_AOT` enables/disables ahead-of-time (AOT) compiler (caching instructions and data to improve performance); specify 1 to enable (default), 0 to disable.
+- `$LATX_KZT` enables/disables native library passthrough (using native libraries where applicable to improve performance); specify 1 to enable (default), 0 to disable.
+- `$LATX_ANONYM`：handle virtual machine check correctly (improving compatibility with certain applications at the cost of emulation accuracy); specify 1 to enable, 0 to disable (default).
 
 For debugging only:
 
-- `$LATX_SOFTFPU` enables/disables soft float emulation (to guarantee the 80-bit precision of x87 instructions); specify 1 to enable, 0 to disable.
+- `$LATX_SOFTFPU` enables/disables soft float emulation (to guarantee the 80-bit precision of x87 instructions); specify 1 to enable, 0 to disable (default).
 
 Typically, 32-bit applications are more dependent upon the precision of the x87 floating-point unit. Should you encounter issue(s) with your application, you may try and enable `$LATX_SOFTFPU` to see if it fixes your issue(s).
 
