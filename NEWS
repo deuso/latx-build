@@ -3,11 +3,12 @@
 [See the English Version Here >>](NEWS.en)
 
 ## 1.5.3-rc1 (2024-07-29)
-- 修复一些库直通的错误；
-- 修复一些 AOT 的错误；
-- 针对 linux unity 进行了功能修复与性能优化；
-- 重构 ptrace 模拟方案；
-- 新世界支持 32 位 syncobj ioctl；
+
+- 修复一些库直通的错误
+- 修复一些 AOT（预编译器）的错误
+- 针对 Linux 版 Unity 游戏引擎进行了功能修复与性能优化
+- 重构 ptrace 模拟方案
+- 为新世界新增 32 位 syncobj 及 ioctl 系统调用
 
 ## 1.5.2-rc1 (2024-05-29)
 
